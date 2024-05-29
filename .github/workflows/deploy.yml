@@ -22,5 +22,5 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
         cd /home/${{ secrets.USERNAME }}/django-sample-repo
         git pull
-        docker-compose up -d --build
+        sudo docker-compose up -d --build
         EOF

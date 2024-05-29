@@ -17,6 +17,7 @@ jobs:
 
     - name: Create Files on EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "\\
-        touch /home/${{ secrets.USERNAME }}/file1.txt ; \\
-        touch /home/${{ secrets.USERNAME }}/file2.txt"
+        ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
+        touch /home/${{ secrets.USERNAME }}/file3.txt
+        touch /home/${{ secrets.USERNAME }}/file4.txt
+        EOF

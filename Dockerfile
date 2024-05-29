@@ -1,5 +1,5 @@
 # Dockerfile
-FROM python:3.10-slim
+FROM python:3.10.12-alpine
 
 # 환경 변수 설정
 ENV PYTHONDONTWRITEBYTECODE 1

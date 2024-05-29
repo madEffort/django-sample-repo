@@ -20,7 +20,7 @@ jobs:
     - name: Sync and Deploy
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
-        cd /home/${{ secrets.USERNAME }}/django-sample-repo
+        cd /home/ubuntu/django-sample-repo
         git pull
         sudo docker-compose up -d --build
         EOF
